@@ -1,0 +1,126 @@
+ Q1. List out different OOPS principles and explain with examples.
+
+OOPs stands for object oriented programming. OOPs uses objects and classes in order to design and run a program. 
+Let understand by creating a student  class. This Student class will have a set of variables or states.
+
+// Creating a class Student with different states
+-> The class Student has the set of properties or states of the student such as name, age, school.
+
+public class Student {
+	private String name;
+	private  int age,
+	private String school}
+
+// Constructor function 
+
+public  Student(String name, int age, String school) {
+	this.name = name;
+	this.age = age;
+	this.school = school;}
+
+// creation of student object 
+-> Object in simple words is an instance of the class. Here we have created an object name Shruti which is an instance of class Student.
+
+public class Student {	public static void main(String [] args) {
+		Student shruti = new Student(“Shruti” , 24,  “xyz”);
+	}}
+
+OOPs works not the four core principles which are as follows - 
+
+1.) INHERITANCE - Inheritance in programming works in the same way as it works in our real life. Inheritance is a way of reusing the existing code and avoids duplicacy of the code. Let us understand this by considering the following example.
+Consider a class Person which has the following properties.
+
+Public class Person {
+	private String name,
+	private int age,
+	}
+
+Now if we want to create a new class Student having some additional properties besides the Person’s class properties. One way of doing is to duplicate the entire code of person class and add additional properties. This is not a good way as it leads to code redundancy. Here comes the role of Inheritance by which the Student class can acquire the properties of the Person class.
+
+2.) POLYMORPHISM - The word poly stands for many and morphism can be seen as forms . Hence, Polymorphism is the ability to exists in different forms. By different forms, it implies that the there could be different objects names created for the same reference object. For Example -
+
+class Phone{
+    public void switchOff(){}
+    public void switchOn(){}
+}
+class iPhone extends Phone{
+    public void callSiri(){}
+}
+
+
+Phone iPhone14 = new Phone();
+
+3.) ENCAPSULATION - Encapsulation is binding of data and the associated methods. Consider a capsule which has the necessary Active pharmaceutical Ingredient along with the flavouring agents which hides the bitter taste of medicines. The flavouring agents could be taken as hiding the data which we do by using private accessors in programming. Encapsulation in this way helps not introduce more security.
+Example ->
+class Bank {
+	 public int accountNo;
+	private String password;   Here the private accessor is used to hide and secure user credentials.
+}
+
+4.) ABSTRACTION - Abstraction is a practice of keeping internal application hidden and hence helps in security. We can make a class as abstract by using abstract keyword. 
+————
+
+Q2. Explain data structures that are mutable versus immutable. 
+
+The words mutation stand for the ability to transform or change. Hence mutable data structures are the one which can be easily altered. 
+Mutable Data Structures  - It includes Arrays, ArrayList, HashMaps, StringBulider. Mutable data structures offers more application of use than non-mutable.
+The state / variable can be easily changed even after creation.
+Immutable - Strings in java is an example of immutable data. 
+For example - String str = “Shruti”;
+I cannot change the character value at any index of the string str.
+StringBuilder on the other hand could be used when we want to alter a string.
+By immutable it simply implies its value can be altered. n Java, except string all are mutable type.
+We can make a mutable object immutable by keeping the field as private by using private accessors.
+
+
+
+
+
+Q5.  Find the Time complexity of the following three pieces of code: (5 marks, each)
+
+for(let i = 0;i<n;i++){        ——> This loop is running for n times  :   0(n)
+	j = 1;
+	while(j<n){               ——> Every time j is being multiplied by two times
+	console.log(i)			   Hence it will run log(n) times
+                                                 The overall Time Complexity : 0(nlogn)
+	j = j*2
+	}
+}
+
+
+Q6.
+i = 1;
+while(i2<n){
+i+=1}
+
+
+
+Lets consider n = 100
+Hence for n = 100 
+I will go only till the square root of n, i.e., 10
+
+Hence the time complexity become 0(sqroot(n));
+
+
+
+Q7. function bblSort(arr){
+for(var i = 0; i < arr.length; i++){
+break;
+for(var j = 0; j < ( arr.length - i -1 ); j++){
+if(arr[j] > arr[j+1]){
+var temp = arr[j]
+arr[j] = arr[j + 1]
+arr[j+1] = temp
+}
+}
+}
+console.log(arr);
+	
+The first loop runs till the arr.length times. In line no 2 . A break is applied, hence the loop will not run ahead of the break statement.
+Hence the time complexity reduces to 0(arr.length).
+
+
+
+
+
+
